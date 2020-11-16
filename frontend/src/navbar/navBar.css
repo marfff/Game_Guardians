@@ -1,4 +1,45 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+    border-style: none none solid none;
+    border-bottom:1px solid greenyellow;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: #36b7ae81;
+}
 .logo {
     width: 20vh;
     pointer-events: none;
-  }
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    font-size: calc(10px + 1vmin);
+}
+nav ul li{
+    padding-left: 20px;
+    list-style: none;
+}
+nav a:hover{
+    opacity: 0.5;
+}
+.searchBar{
+    border-radius: 20px;
+    text-align: center;
+    width: 200%;
+    height: 50%;
+}
+a:visited,a:link{
+    text-decoration: none;
+    color: #abd1cf;
+}
+.searchBar:focus{
+    text-align: left;
+}
+.divSearch{
+    padding-top: 2%;
+}
+.divLinks{
+    padding-top: 1.5%;
+}

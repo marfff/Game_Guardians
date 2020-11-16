@@ -5,12 +5,12 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-    <Navbar />
       <header className="App-header">
-        <p>
-          Welcome
-        </p>
+        <Navbar />
       </header>
+      <body>
+        <p>AHHHHHHHHH</p>
+      </body>
     </div>
   );
 }
