@@ -3,13 +3,16 @@ nav {
     justify-content: space-around;
     border-style: none none solid none;
     border-bottom:1px solid greenyellow;
+    padding-top: 1%;
+    padding-bottom: 1%;
     width: 100%;
+    background-color: #36b7ae81;
     position: fixed;
     z-index: 999;
-    background-color: #36b7ae81;
+    height: 12vh;
 }
 .logo {
-    width: 25vh;
+    width: 175px;
     pointer-events: none;
 }
 nav ul{
