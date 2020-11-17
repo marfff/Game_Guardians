@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../images/GG_logo.png';
-import './navBar.css'
+import './navBar.css';
 
 function Navbar() {
     return(
@@ -9,14 +9,14 @@ function Navbar() {
             <img src={logo} className="logo" alt="logo" />
         </div>
         <div className = "divSearch">
-            <input className = "searchBar" defaultValue = "🔍   Search"/>
+            <input className = "searchBar" placeholder = "🔍   Search"/>
         </div>
         <div className = "divLinks">
             <ul>
-                <li><a href ="/home">Home Page</a></li>
+                <li><a href ="/main">Home Page</a></li>
                 <li><a href ="/signUp">Sign Up</a></li>
                 <li><a href ="/login">Login</a></li>
-                <li><a href ="/review">Add Review</a></li>
+                <li><a href ="/review">Create Review</a></li>
             </ul>
         </div>
     </nav>

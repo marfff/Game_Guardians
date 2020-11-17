@@ -25,6 +25,10 @@ app.get('/users', (req, res) => {
     })
 })
 
+// app.get('/login', (req, res) => {
+//     res.render('login');
+// })
+
 app.post('/users', (req, res) => {
     const user = new User({
         email: req.body.email,

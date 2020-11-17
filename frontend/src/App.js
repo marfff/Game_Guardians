@@ -1,5 +1,6 @@
 import React from 'react';
-import Navbar from './navbar/navBar'
+import Navbar from './components/navbar/navBar';
+import Signup from './components/signup/signUp';
 import './App.css';
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
         <Navbar />
       </header>
       <body>
-        <p>AHHHHHHHHH</p>
+      <Signup />
       </body>
     </div>
   );
