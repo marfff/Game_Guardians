@@ -13,9 +13,10 @@ function Navbar() {
         </div>
         <div className = "divLinks">
             <ul>
-            <li><a href ="/home">Home Page</a></li>
-            <li><a href ="/login">Login</a></li>
-            <li><a href ="/review">Add Review</a></li>
+                <li><a href ="/home">Home Page</a></li>
+                <li><a href ="/signUp">Sign Up</a></li>
+                <li><a href ="/login">Login</a></li>
+                <li><a href ="/review">Add Review</a></li>
             </ul>
         </div>
     </nav>
