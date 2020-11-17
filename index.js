@@ -6,15 +6,20 @@ const User = require('./models/user');
 const Game = require('./models/game');
 const bodyParser = require('body-parser');
 const game = require('./models/game');
+const cors = require('cors');
+const { static } = require('express');
 
+//app.use
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(cors());
 
 mongoose.connect(process.env.mongodbConnectionString, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
 
+//app.get
 app.get('/', (req, res) => {
     res.status(200);
     res.send("Game Guardians Welcome You!");
@@ -26,6 +31,15 @@ app.get('/users', (req, res) => {
         res.send(users);
     });
 });
+
+app.post('/signup', (req, res) => {
+    res.status(200);
+    res.send({
+        email: req.body.email,
+        password: req.body.password,
+        status: "okay"
+    });
+})
 
 // app.get('/login', (req, res) => {
 //     res.render('login');
