@@ -8,6 +8,7 @@ const bodyParser = require('body-parser');
 const game = require('./models/game');
 const cors = require('cors');
 const { static } = require('express');
+const bcrypt = require('bcrypt');
 
 //app.use
 app.use(bodyParser.json());
@@ -34,11 +35,24 @@ app.get('/users', (req, res) => {
 
 app.post('/signup', (req, res) => {
     res.status(200);
-    res.send({
-        email: req.body.email,
-        password: req.body.password,
-        status: "okay"
-    });
+    if (req.body.password === req.body.verifyPassword){
+        new User({
+            email: req.body.email,
+            password: req.body.password
+        }).save((err, obj) => {
+            if (err) { //if a password is too short or if there is duplicated emails
+                res.status(200);
+                res.send({'status': "not okay", 'message': err.message});
+            } else{
+                res.status(200);
+                res.send({'status': 'okay', 'email': req.body.email, 'password': req.body.password});
+            }
+        })
+    } else if (req.body.password !== req.body.verifyPassword) {
+        res.status(200);
+        res.send({status: "not okay", 'message': "Passwords do not match"});
+    }
+
 })
 
 // app.get('/login', (req, res) => {

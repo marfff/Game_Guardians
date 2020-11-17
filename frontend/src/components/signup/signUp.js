@@ -20,20 +20,28 @@ function SignUp() {
             verifyPassword: verifyPassword
         }).then((res) => {
             console.log(res.data);
+            if (res.data.status === "okay") {
+                console.log("Everything is fine!");
+                
+            } else {
+                alert(res.data.message);
+                setPassword("");
+                setVerifyPassword("");
+            }
         })
     }
     return(
         <div>
-            <h1>Sign in Page</h1>
+            <h1>Sign up Page</h1>
             <form onSubmit={sendDataToExpress}>
                 <label htmlFor="email">Email: </label>
-                <input type="text" name="email" id="email" onChange={handleChange}></input>
+                <input type="text" name="email" value={email} id="email" onChange={handleChange}></input>
 
                 <label htmlFor="password">Password: </label>
-                <input type="password" name="password" id="password" onChange={handleChange}></input>
+                <input type="password" name="password" value={password} id="password" onChange={handleChange}></input>
 
                 <label htmlFor="verifyPassword">Verify Password: </label>
-                <input type="password" name="verifyPassword" id="verifyPassword" onChange={handleChange}></input>
+                <input type="password" name="verifyPassword" value={verifyPassword} id="verifyPassword" onChange={handleChange}></input>
 
                 <input type="submit" name="submit"></input>
             </form>
