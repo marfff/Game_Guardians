@@ -1,22 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../images/GG_logo.png';
 import './navBar.css';
 
-function Navbar() {
+function Navbar(props) {
     return(
     <nav>
         <div>
             <img src={logo} className="logo" alt="logo" />
         </div>
         <div className = "divSearch">
-            <input className = "searchBar" placeholder = "🔍   Search"/>
+            <input className = "searchBar" placeholder = "🔍    Search"/>
         </div>
         <div className = "divLinks">
             <ul>
-                <li><a href ="/main">Home Page</a></li>
-                <li><a href ="/signUp">Sign Up</a></li>
-                <li><a href ="/login">Login</a></li>
-                <li><a href ="/review">Create Review</a></li>
+                <li><Link to="/main">Home Page</Link></li>
+                <li><Link to="/">Sign Up</Link></li>
+                <li><Link to="/createReview">Create Review</Link></li>
+                <li><Link to="/login">Login</Link></li>
             </ul>
         </div>
     </nav>
