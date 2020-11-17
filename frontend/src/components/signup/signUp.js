@@ -32,18 +32,18 @@ function SignUp() {
     }
     return(
         <div>
-            <h1>Sign up Page</h1>
-            <form onSubmit={sendDataToExpress}>
+            <form onSubmit={sendDataToExpress} className="signUpForm">
+                <h2>Sign up</h2>
                 <label htmlFor="email">Email: </label>
-                <input type="text" name="email" value={email} id="email" onChange={handleChange}></input>
+                <input type="text" name="email" value={email} id="email" className="signUpInput" onChange={handleChange}></input>
 
                 <label htmlFor="password">Password: </label>
-                <input type="password" name="password" value={password} id="password" onChange={handleChange}></input>
+                <input type="password" name="password" value={password} id="password" className="signUpInput" onChange={handleChange}></input>
 
                 <label htmlFor="verifyPassword">Verify Password: </label>
-                <input type="password" name="verifyPassword" value={verifyPassword} id="verifyPassword" onChange={handleChange}></input>
+                <input type="password" name="verifyPassword" value={verifyPassword} className="signUpInput" id="verifyPassword" onChange={handleChange}></input>
 
-                <input type="submit" name="submit"></input>
+                <input type="submit" name="submit" className="signUpSubmit"></input>
             </form>
         </div>
     );
