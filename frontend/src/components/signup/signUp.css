@@ -14,17 +14,16 @@
     font-size: 1.5em;
     align-items: center;
     /* background: linear-gradient(45deg, #36b7ae81, #74b73681) */
-    background: linear-gradient(45deg, #36b7ae, #cfeb34);
+    background: linear-gradient(45deg, #36b7ae, #a3cc75);
     background-size: 400% 400%;
     animation: gradient-shift 30s ease infinite;
     border-radius: 1em;
     padding: 2%;
 }
 .signUpForm h2 {
-    color: rgba(0, 0, 0, 0.52);
+    color: #337272;
 }
 .signUpInput {
-    /* width: 90%; */
     width: 90%;
     height: 35px;
     padding-left: 15px;
@@ -69,10 +68,9 @@
     border: none;
     border-radius: 20px;
     margin-top: 23px;
-    background-color: #28a79e;
+    background-color: #327272;
     cursor: pointer;
 }
-
 
 
 /*ANIMATIONS*/
