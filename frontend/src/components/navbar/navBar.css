@@ -6,10 +6,10 @@ nav {
     padding-top: 1%;
     padding-bottom: 1%;
     width: 100%;
-    background-color: #36b7ae81;
+    background-color: #337272;
     position: fixed;
     z-index: 999;
-    height: 12vh;
+    height: 10vh;
 }
 .logo {
     width: 175px;
@@ -42,7 +42,8 @@ a:visited,a:link{
 }
 .divSearch{
     padding-top: 1%;
+    padding-left: 4%;
 }
 .divLinks{
-    padding-top: 1%;
+    padding-top: 1.5%;
 }

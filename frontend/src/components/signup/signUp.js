@@ -31,9 +31,9 @@ function SignUp() {
         })
     }
     return(
-        <div>
+        <div ClassName ="signup-background">
             <form onSubmit={sendDataToExpress} className="signUpForm">
-                <h2>Sign up</h2>
+                <h2>Sign up to Game Guardians!</h2>
                 <label htmlFor="email">Email: </label>
                 <input type="text" name="email" value={email} id="email" className="signUpInput" onChange={handleChange}></input>
 
