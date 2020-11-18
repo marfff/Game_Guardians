@@ -14,7 +14,7 @@
     font-size: 1.5em;
     align-items: center;
     /* background: linear-gradient(45deg, #36b7ae81, #74b73681) */
-    background: linear-gradient(45deg, #36b7ae, #eaf739);
+    background: linear-gradient(45deg, #36b7ae, #cfeb34);
     background-size: 400% 400%;
     animation: gradient-shift 30s ease infinite;
     border-radius: 1em;
@@ -36,13 +36,21 @@
     color: white;
     font-size: 1em;
 }
+.signUpInput:focus {
+    box-shadow: inset 0 0 15px #218b7daf;
+}
+.signUpInput::selection {
+    background-color: #218b84af;
+}
+
 .signUpForm label {
     font-weight: 400;
     text-transform: uppercase;
     font-size: 0.75em;
     padding-left: 15px;
     padding-bottom: 10px;
-    color: rgb(255, 255, 255);
+    /* color: rgb(255, 255, 255); */
+    color: rgba(0, 0, 0, 0.52);
     display: block;
     height: 10%;
 }

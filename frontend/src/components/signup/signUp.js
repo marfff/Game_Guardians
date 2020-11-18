@@ -1,8 +1,11 @@
 import React, {useState} from 'react';
+import { Router, useHistory } from 'react-router-dom';
 import axios from 'axios';
 import './signUp.css';
 
 function SignUp() {
+
+    const history = useHistory();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [verifyPassword, setVerifyPassword] = useState("");
@@ -22,7 +25,7 @@ function SignUp() {
             console.log(res.data);
             if (res.data.status === "okay") {
                 console.log("Everything is fine!");
-                
+                history.push('/main');
             } else {
                 alert(res.data.message);
                 setPassword("");
@@ -35,7 +38,7 @@ function SignUp() {
             <form onSubmit={sendDataToExpress} className="signUpForm">
                 <h2>Sign up</h2>
                 <label htmlFor="email">Email: </label>
-                <input type="text" name="email" value={email} id="email" className="signUpInput" onChange={handleChange}></input>
+                <input type="text" name="email"  autoComplete = "off" value={email} id="email" className="signUpInput" onChange={handleChange}></input>
 
                 <label htmlFor="password">Password: </label>
                 <input type="password" name="password" value={password} id="password" className="signUpInput" onChange={handleChange}></input>
