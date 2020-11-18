@@ -15,15 +15,17 @@ function App() {
           <header className="App-header">
             <Navbar />
           </header>
-          <Switch>
-            <Route exact path = "/" component = {Signup} />
-            <Route exact path = "/main" component = {Main} />
-            <Route exact path = "/login" component = {Login} />
-            <Route exact path = "/createReview" component = {CreateReview} />
-        </Switch>
-      </div>
-    </BrowserRouter>
-  </React.Fragment>
+          <body className ="AppBody">
+            <Switch>
+              <Route exact path = "/" component = {Signup} />
+              <Route exact path = "/main" component = {Main} />
+              <Route exact path = "/login" component = {Login} />
+              <Route exact path = "/createReview" component = {CreateReview} />
+            </Switch>
+          </body>
+        </div>
+      </BrowserRouter>
+    </React.Fragment>
   );
 }
 
