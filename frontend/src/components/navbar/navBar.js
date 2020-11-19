@@ -6,7 +6,7 @@ import './navBar.css';
 const Navbar = props => {
     return (
         <nav>
-            <div>
+            <div className="divLogo">
                 <img src={logo} className="logo" alt="logo" />
             </div>
             <div className = "divLinks">

@@ -6,13 +6,13 @@ import './navBar.css';
 const Navbar = props => {
     return (
         <nav>
-            <div>
-                <img src={logo} className="logo" alt="logo" />
+            <div className="divLogoLoggedIn">
+                <img src={logo} className="logoLoggedIn" alt="logo" />
             </div>
             <div className = "divSearch">
-                <input className = "searchBar" placeholder = "🔍    Search"/>
+                <input className = "searchBar" placeholder = "🔍 Search For a Game"/>
             </div>
-            <div className="divLinks">
+            <div className="divLinksLoggedIn">
                 <ul>
                     <li><Link to="/main">Home Page</Link></li>
                     <li><Link to="/createReview">Create Review</Link></li>
