@@ -5,7 +5,6 @@ require('dotenv').config();
 const User = require('./models/user');
 const Game = require('./models/game');
 const bodyParser = require('body-parser');
-const game = require('./models/game');
 const cors = require('cors');
 const { static } = require('express');
 const bcrypt = require('bcrypt');
@@ -50,12 +49,11 @@ passport.use(new LocalStrategy({
     }
 ));
 
+
 mongoose.connect(process.env.mongodbConnectionString, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
-
-
 
 //app.get
 app.get('/', (req, res) => {
@@ -69,6 +67,7 @@ app.get('/users', (req, res) => {
         res.send(users);
     });
 });
+
 
 app.post('/signup', (req, res) => {
     res.status(200);
@@ -90,8 +89,6 @@ app.post('/signup', (req, res) => {
         res.send({status: "not okay", 'message': "Passwords do not match"});
     }
 })
-
-
 
 app.post('/login', passport.authenticate('local', {
     successRedirect: '/loginSuccess',
@@ -119,43 +116,37 @@ app.post('/users', (req, res) => {
     });
 });
 
-app.get('/game', (req, res) => {
+app.get('/games', (req, res) => {
     Game.find({}, (err, games) => {
         res.status(200);
         res.send(games);
     });
 });
 
-app.post('/game', (req, res) => {
+app.post('/games', (req, res) => {
     const game = new Game ({
         title: req.body.title,
-        description: req.body.description,
+        short_desc: req.body.short_desc,
         pegi: req.body.pegi,
-        platform: req.body.platform,
-        ageRating: req.body.ageRating,
-        educationalValue: req.body.educationalValue,
-        easeOfPlay: req.body.easeOfPlay,
+        stars: req.body.stars,
+        synopsis: req.body.synopsis,
+        educational: req.body.educational,
+        adult_themes: req.body.adult_themes,
         violence: req.body.violence,
-        sex: req.body.sex,
-        language: req.body.language,
-        consumerism: req.body.consumerism,
-        substanceUse: req.body.substanceUse
+
     })
     game.save().then(() => {
         res.status(200);
         res.send({'status':'worked', 
             'title': req.body.title, 
-            'description': req.body.description, 
+            'short_desc': req.body.short_desc, 
             'pegi': req.body.pegi, 
-            'platform': req.body.platform,
-            'ageRating': req.body.ageRating,
-            'educationalValue': req.body.educationalValue,
-            'easeOfPlay': req.body.easeOfPlay,
-            'violence': req.body.violence,
-            'sex': req.body.sex,
-            'language': req.body.language,
-            'consumerism': req.body.consumerism,
-            'substanceUse': req.body.substanceUse 
+            'stars': req.body.stars,
+            'synopsis':req.body.synopsis,
+            'educational': req.body.educational,
+           'adult_themes':req.adult_themes,
+           'violence': req.body.violence,
+           
         });
     });
 });
