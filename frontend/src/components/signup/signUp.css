@@ -22,6 +22,7 @@
 }
 .signUpForm h2 {
     color: #337272;
+    text-align: center;
 }
 .signUpInput {
     width: 90%;
