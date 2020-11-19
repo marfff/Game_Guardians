@@ -1,0 +1,81 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.signUpForm {
+    margin: 10px auto;
+    width: 40vw;
+    height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-direction: column;
+    font-size: 1.5em;
+    align-items: center;
+    /* background: linear-gradient(45deg, #36b7ae81, #74b73681) */
+    background: linear-gradient(45deg, #36b7ae, #a3cc75);
+    background-size: 400% 400%;
+    animation: gradient-shift 30s ease infinite;
+    border-radius: 1em;
+    padding: 2%;
+}
+.signUpForm h2 {
+    color: #337272;
+}
+.signUpInput {
+    width: 90%;
+    height: 35px;
+    padding-left: 15px;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white;
+    font-size: 1em;
+}
+.signUpInput:focus {
+    box-shadow: inset 0 0 15px #218b7daf;
+}
+.signUpInput::selection {
+    background-color: #218b84af;
+}
+
+.signUpForm label {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    /* color: rgb(255, 255, 255); */
+    color: rgba(0, 0, 0, 0.52);
+    display: block;
+    height: 10%;
+}
+.signUpForm * {
+    height: 30%;
+}
+.signUpSubmit {
+    grid-column: 1 / 3;
+    width: 30%;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    text-align: center;
+    color: #ffffff;
+    height: 20%;
+    border: none;
+    border-radius: 20px;
+    margin-top: 23px;
+    background-color: #327272;
+    cursor: pointer;
+}
+
+
+/*ANIMATIONS*/
+@keyframes gradient-shift {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
