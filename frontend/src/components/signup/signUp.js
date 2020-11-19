@@ -25,6 +25,7 @@ function SignUp() {
             console.log(res.data);
             if (res.data.status === "okay") {
                 console.log("Everything is fine!");
+                sessionStorage.setItem("email", [email]);
                 history.push('/main');
             } else {
                 alert(res.data.message);
@@ -38,7 +39,7 @@ function SignUp() {
             <form onSubmit={sendDataToExpress} className="signUpForm">
                 <h2>Sign up to Game Guardians!</h2>
                 <label htmlFor="email">Email: </label>
-                <input type="text" name="email"  autoComplete = "off" value={email} id="email" className="signUpInput" onChange={handleChange}></input>
+                <input type="email" name="email"  autoComplete = "off" value={email} id="email" className="signUpInput" onChange={handleChange}></input>
 
                 <label htmlFor="password">Password: </label>
                 <input type="password" name="password" value={password} id="password" className="signUpInput" onChange={handleChange}></input>

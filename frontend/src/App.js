@@ -1,11 +1,13 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route} from 'react-router-dom';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Navbar from './components/navbar/navBar';
+import NavbarLI from './components/navbar/navBarLoggedIn';
 import Signup from './components/signup/signUp';
 import Main from './components/main/main';
 import Login from './components/login/login';
 import CreateReview from './components/createreview/createReview';
 import './App.css';
+
 
 function App() {
   return (
@@ -13,7 +15,12 @@ function App() {
       <BrowserRouter>
         <div className="App">
           <header className="App-header">
-            <Navbar />
+          <Switch>
+            <Route exact path = "/main" component = {NavbarLI}/>
+            <Route exact path = "/createReview" component = {NavbarLI}/>
+            <Route exact path = "/" component = {Navbar} />
+            <Route exact path = "/login" component = {Navbar} />
+          </Switch>
           </header>
           <body className ="AppBody">
             <Switch>

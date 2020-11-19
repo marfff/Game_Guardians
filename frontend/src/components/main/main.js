@@ -2,8 +2,14 @@ import React from 'react';
 import './main.css';
 
 function mainPage() {
+    let email = sessionStorage.getItem("email");
+    let pos = email.indexOf('@');
+    let user = email.substr(0,pos);
     return(
-        <h1>This is the Main Page</h1>
+        <div className = "mainDiv">
+            <h1>Welcome {user}!</h1>
+            <h1>Main Review Page</h1>
+        </div>
     );
 };
 
