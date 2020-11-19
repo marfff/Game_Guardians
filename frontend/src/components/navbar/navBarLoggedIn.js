@@ -9,10 +9,14 @@ const Navbar = props => {
             <div>
                 <img src={logo} className="logo" alt="logo" />
             </div>
-            <div className = "divLinks">
+            <div className = "divSearch">
+                <input className = "searchBar" placeholder = "🔍    Search"/>
+            </div>
+            <div className="divLinks">
                 <ul>
-                    <li><Link to="/login">Login</Link></li>
-                    <li><Link to="/">Sign Up</Link></li>
+                    <li><Link to="/main">Home Page</Link></li>
+                    <li><Link to="/createReview">Create Review</Link></li>
+                    <li><Link to="/login">Logout</Link></li>
                 </ul>
             </div>
         </nav>

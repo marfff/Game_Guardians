@@ -55,8 +55,6 @@ mongoose.connect(process.env.mongodbConnectionString, {
     useUnifiedTopology: true,
 });
 
-
-
 //app.get
 app.get('/', (req, res) => {
     res.status(200);

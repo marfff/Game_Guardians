@@ -9,7 +9,7 @@ nav {
     background-color: #337272;
     position: fixed;
     z-index: 999;
-    height: 10vh;
+    min-height: 10vh;
 }
 .logo {
     width: 175px;
