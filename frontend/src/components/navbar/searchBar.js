@@ -11,7 +11,6 @@ export default class SearchBar extends React.Component{
             selectedOption: null
         }
     }
-
     getGames() {
         axios.get('http://localhost:5000/games',{})
         .then(res => {
@@ -31,15 +30,18 @@ export default class SearchBar extends React.Component{
     handleChange = (selectedOption) => {
         this.setState({ selectedOption })
     }
-
     render() {
         const { selectedOption } = this.state;
         return (
+            <div className="searchBarButton">
             <Select
+                className="searchBar"
                 value={selectedOption}
                 onChange={this.handleChange}
                 options={this.state.titles}
             />
+            <button type="submit" className="searchButton">🔍</button>
+            </div>
         )
     }
 }
