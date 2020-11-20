@@ -1,32 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import './main.css';
 import axios from 'axios';
+import Slider from './Slider/Slider';
+import Game from '../game/game'
 
 function MainPage() {
+    const email = sessionStorage.getItem("email");
+    const pos = email.indexOf('@');
+    const user = email.substr(0,pos);
    
     return(
-        <div>
-            {(sessionStorage.getItem("login")) ? <h1>YOU ARE LOGGED IN</h1> : <h1>YOU ARE NOT LOGGED IN</h1>}
+        <div className="mainDiv">
+            {(sessionStorage.getItem("login")) ?
+                <div class="successMain">
+                    <span><h1>Welcome back </h1><h1 id="userWelcome">{user}!</h1></span>
+                    <Slider />  
+                    <div className="recentGames">
+                        <h1 className="recentGamesHeader">Recent Games: </h1>   
+                        <Game />
+                        <Game />  
+                        <Game />  
+                        <Game />   
+                    </div>       
+                </div>
+                
+                
+                : <h1>YOU ARE NOT LOGGED IN</h1>}
+            
         </div>
     )
-    // if (email !== null) {
-    //     let pos = email.indexOf('@');
-    //     let user = email.substr(0,pos);
-
-
-    //     return(
-
-    //         <div className = "mainDiv">
-    //             <h1>Welcome {user}!</h1>
-    //             <h1>Main Review Page</h1>
-    //         </div>
-    //     )
-    // } else {
-    //     return(
-    //     <div>
-    //         <h1>Unauthorised</h1>
-    //     </div>
-    // )}
 };
 
 export default MainPage;

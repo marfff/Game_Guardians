@@ -1,3 +1,23 @@
-.mainDiv{
-    color: white;
+.mainDiv {
+    color: rgb(0, 0, 0);
+    /* height: 60vh; */
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#userWelcome {
+    color:  #085353;
+    text-transform: uppercase;
+}
+.recentGames {
+    margin-top: 10px;
+    border: 1pt solid #085353;
+    background: #56b6b68f;
+    width: 55%;
+}
+.recentGamesHeader {
+    font-size: 3em;
+    text-decoration: underline;
 }

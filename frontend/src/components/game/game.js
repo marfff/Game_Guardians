@@ -1,12 +1,12 @@
 import React from 'react';
 import './game.css';
 
-function game() {
+function Game() {
     return(
         <div>
-            <h1>Info about one game page</h1>
+            <h1>Info about one game</h1>
         </div>
     );
 };
 
-export default game;
+export default Game;
