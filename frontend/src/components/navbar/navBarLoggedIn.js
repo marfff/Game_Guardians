@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../images/GG_logo.png';
+import SearchBar from './searchBar';
 import './navBar.css';
 
-const Navbar = props => {
+function Navbar(props){
     return (
         <nav>
             <div className="divLogoLoggedIn">
                 <img src={logo} className="logoLoggedIn" alt="logo" />
             </div>
             <div className = "divSearch">
-                <input className = "searchBar" placeholder = "🔍 Search For a Game"/>
+                <SearchBar />
             </div>
             <div className="divLinksLoggedIn">
                 <ul>

@@ -48,7 +48,6 @@ app.get('/users', (req, res) => {
     });
 });
 
-
 app.post('/signup', (req, res) => {
     res.status(200);
     if (req.body.password === req.body.verifyPassword){
