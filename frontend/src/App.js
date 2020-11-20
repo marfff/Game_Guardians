@@ -6,6 +6,7 @@ import Signup from './components/signup/signUp';
 import Main from './components/main/main';
 import Login from './components/login/login';
 import CreateReview from './components/createreview/createReview';
+import Logout from './components/logout/Logout';
 import './App.css';
 
 
@@ -27,6 +28,7 @@ function App() {
               <Route exact path = "/" component = {Signup} />
               <Route exact path = "/main" component = {Main} />
               <Route exact path = "/login" component = {Login} />
+              <Route exact path = "/logout" component = {Logout} />
               <Route exact path = "/createReview" component = {CreateReview} />
             </Switch>
           </body>

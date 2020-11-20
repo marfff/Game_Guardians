@@ -16,7 +16,7 @@ const Navbar = props => {
                 <ul>
                     <li><Link to="/main">Home Page</Link></li>
                     <li><Link to="/createReview">Create Review</Link></li>
-                    <li><Link to="/login">Logout</Link></li>
+                    <li><Link to="/logout">Logout</Link></li>
                 </ul>
             </div>
         </nav>

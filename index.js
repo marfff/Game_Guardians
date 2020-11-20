@@ -93,7 +93,11 @@ app.post('/logout', (req, res) => { //resets user id to null - logging them out/
 })
 
 app.post('/loginCheck', (req, res) => { //checks if a user has an active session//
-    res.status(200).json({status: req.session.userID, email: req.session.email})
+    if (req.session.userID) {
+        res.status(200).json({status: 'in', session: req.session.userID, email: req.session.email})
+    } else {
+        res.status(200).json({status: 'out', session: req.session.userID, email: req.session.email})
+    }
 })
 
 app.post('/users', (req, res) => {
