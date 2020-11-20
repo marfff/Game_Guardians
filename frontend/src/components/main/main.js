@@ -28,7 +28,6 @@ function MainPage() {
                 : <h1>YOU ARE NOT LOGGED IN</h1>}
             
         </div>
-    )
 };
 
 export default MainPage;
