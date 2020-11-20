@@ -7,6 +7,7 @@ import Main from './components/main/main';
 import Login from './components/login/login';
 import CreateReview from './components/createreview/createReview';
 import Logout from './components/logout/Logout';
+import UserPage from './components/userPage/userPage';
 import './App.css';
 
 
@@ -19,8 +20,10 @@ function App() {
           <Switch>
             <Route exact path = "/main" component = {NavbarLI}/>
             <Route exact path = "/createReview" component = {NavbarLI}/>
+            <Route exact path = "/account" component = {NavbarLI} />
             <Route exact path = "/" component = {Navbar} />
             <Route exact path = "/login" component = {Navbar} />
+            <Route exact path = "/logout" component = {Navbar} />
           </Switch>
           </header>
           <body className ="AppBody">
@@ -30,6 +33,7 @@ function App() {
               <Route exact path = "/login" component = {Login} />
               <Route exact path = "/logout" component = {Logout} />
               <Route exact path = "/createReview" component = {CreateReview} />
+              <Route exact path = "/account" component = {UserPage} />
             </Switch>
           </body>
         </div>

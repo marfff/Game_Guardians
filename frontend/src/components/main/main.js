@@ -8,7 +8,7 @@ function MainPage() {
         <div>
             {(sessionStorage.getItem("login")) ? <h1>YOU ARE LOGGED IN</h1> : <h1>YOU ARE NOT LOGGED IN</h1>}
         </div>
-    )
+    )//import axios from 'axios';
     // if (email !== null) {
     //     let pos = email.indexOf('@');
     //     let user = email.substr(0,pos);
