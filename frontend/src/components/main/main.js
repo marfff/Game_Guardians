@@ -3,22 +3,10 @@ import './main.css';
 import axios from 'axios';
 
 function MainPage() {
-    const [session, setSession] = useState({});
-    useEffect(() => {
-        if(session.session !== null) {
-            console.log("line 8 has started")
-            axios.post('http://localhost:5000/loginCheck').then((res) => {
-                setSession(res.data);
-            })
-        }
-    })
+   
     return(
         <div>
-            {(session.status === 'in') ? <h1>YOU ARE LOGGED IN</h1> : <h1>YOU ARE NOT LOGGED IN</h1>}
-            <p>status: {session.status}</p>
-            <p>session: {session.session}</p>
-            <p>email: {session.email}</p>
-
+            {(sessionStorage.getItem("login")) ? <h1>YOU ARE LOGGED IN</h1> : <h1>YOU ARE NOT LOGGED IN</h1>}
         </div>
     )
     // if (email !== null) {

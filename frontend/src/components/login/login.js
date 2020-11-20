@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Router, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import '../signup/signUp.css';
 
@@ -18,9 +18,9 @@ function Login() {
         axios.post("http://localhost:5000/login", {
             email, password
         }).then((res) => {
-            console.log(res.data);
          if (res.data.status === "login okay") {
             sessionStorage.setItem("email", [email]);
+            sessionStorage.setItem("login",true);
             history.push('/main');
         } else if (res.data.status === "login not okay") {
             if (window.confirm("Login credentials not found.\n \nSignup?")) {

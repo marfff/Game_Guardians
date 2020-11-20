@@ -1,22 +1,12 @@
-import React, {useState, useEffect} from 'react';
-import { Router, useHistory } from 'react-router-dom';
-import axios from 'axios';
+import React from 'react';
+import { useHistory } from 'react-router-dom';
 import '../signup/signUp.css';
 
 function Logout() {
 
-    const user_id = sessionStorage.getItem("userID");
-    const [session, setSession] = useState(user_id);
+    sessionStorage.removeItem("email");
+    sessionStorage.removeItem("login");
 
-
-
-    useEffect(() => {
-        console.log("effecting");
-        axios.post('http://localhost:5000/logout').then((res) => {
-            setSession(null)
-            console.log(res.data)
-        })
-    })
 
     return(
         <div>
