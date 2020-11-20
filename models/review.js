@@ -4,6 +4,7 @@ const reviewSchema = new mongoose.Schema({
     title:{type: String, required: true},
     email:{type: String, required: true},
     review:{type:String, required: true},
+    starsgiven:{type:String, required: true},
     
 });
 

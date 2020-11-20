@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 const User = require('./models/user');
 const Game = require('./models/game');
+const Review = require('./models/review');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const { static } = require('express');
@@ -47,7 +48,6 @@ app.get('/users', (req, res) => {
         res.send(users);
     });
 });
-
 
 app.post('/signup', (req, res) => {
     res.status(200);
@@ -112,11 +112,26 @@ app.post('/users', (req, res) => {
 });
 
 app.get('/games', (req, res) => {
-    Game.find({}, (err, games) => {
+ 
+    //Game.find({title:"Fifa 21"}, (err, games) => {
+    //Game.find({pegi:{$regex: "^3.*"}}, (err, games) => {
+    Game.find({stars:{$regex: "^2.*"}}, (err, games) => {
         res.status(200);
         res.send(games);
     });
 });
+
+// router.get('/games/, (req, res) => {
+//     Game.find({stars:{$regex: "^2.*"}}, (err, games) => {
+//         if (err) {
+//             console.log(err);
+//             res.status(404).json({err: `The game ${req.body.title} does not exist!`});  
+//         } else {
+//             res.status(200);
+//             res.send(games);
+//         }
+//     });
+// });
 
 app.post('/games', (req, res) => {
     const game = new Game ({
@@ -127,7 +142,7 @@ app.post('/games', (req, res) => {
         synopsis: req.body.synopsis,
         educational: req.body.educational,
         adult_themes: req.body.adult_themes,
-        violence: req.body.violence,
+        violence: req.body.violence
 
     })
     game.save().then(() => {
@@ -140,12 +155,38 @@ app.post('/games', (req, res) => {
             'synopsis':req.body.synopsis,
             'educational': req.body.educational,
            'adult_themes':req.adult_themes,
-           'violence': req.body.violence,
+           'violence': req.body.violence
            
         });
     });
 });
 
+
+app.get('/reviews', (req, res) => {
+    Review.find({}, (err, reviews) => {
+        res.status(200);
+        res.send(reviews);
+    });
+});
+
+app.post('/reviews', (req, res) => {
+    const review = new Review ({
+        title: req.body.title,
+        email: req.body.email,
+        review: req.body.review,
+        starsgiven: req.body.starsgiven,
+    })
+
+    review.save().then(() => {
+        res.status(200);
+        res.send({'status':'worked', 
+            'title': req.body.title, 
+            'email': req.body.email, 
+            'review': req.body.review, 
+            'starsgiven': req.body.starsgiven,
+        });
+    });
+});
 
 app.listen(5000, () => {
     console.log('Listening on port 5000');
