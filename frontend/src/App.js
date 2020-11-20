@@ -8,6 +8,7 @@ import Login from './components/login/login';
 import CreateReview from './components/createreview/createReview';
 import Logout from './components/logout/Logout';
 import UserPage from './components/userPage/userPage';
+import DeleteUser from './components/deleteUser/DeleteUser';
 import './App.css';
 
 
@@ -24,6 +25,7 @@ function App() {
             <Route exact path = "/" component = {Navbar} />
             <Route exact path = "/login" component = {Navbar} />
             <Route exact path = "/logout" component = {Navbar} />
+            <Route exact path = "/deleteUser" component = {NavbarLI} />
           </Switch>
           </header>
           <body className ="AppBody">
@@ -34,6 +36,7 @@ function App() {
               <Route exact path = "/logout" component = {Logout} />
               <Route exact path = "/createReview" component = {CreateReview} />
               <Route exact path = "/account" component = {UserPage} />
+              <Route exact path = "/deleteUser" component = {DeleteUser} />
             </Switch>
           </body>
         </div>
