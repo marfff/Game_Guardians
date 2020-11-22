@@ -48,30 +48,6 @@ app.get('/users', (req, res) => {
     });
 });
 
-// app.post('/deleteUser', (req, res) => {
-//     res.status(200);
-//     if (req.body.password === req.body.verifyPassword){
-//         User.find({
-//             email: req.body.email,
-//             password: req.body.password
-//         }).remove((err, obj) => {
-//             if (err) { //if a password is too short or if there is duplicated emails
-//                 res.status(200);
-//                 res.send({'status': "not okay", 'message': err.message});
-//             } else{
-//                 res.status(200);
-//                 res.send({'status': 'user deleted'});
-//                 req.session.userID = null;
-//                 req.session.email = null;
-//                 req.session.save();
-//             }
-//         })
-//     } else if (req.body.password !== req.body.verifyPassword) {
-//         res.status(200);
-//         res.send({status: "not okay", 'message': "Passwords do not match"});
-//     }
-// })
-
 app.post('/signup', (req, res) => {
     res.status(200);
     if (req.body.password === req.body.verifyPassword){
