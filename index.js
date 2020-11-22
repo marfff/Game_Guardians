@@ -59,7 +59,7 @@ app.post('/signup', (req, res) => {
             if (err) { //if a password is too short or if there is duplicated emails
                 res.status(200);
                 res.send({'status': "not okay", 'message': err.message});
-            } else{
+            } else {
                 res.status(200);
                 res.send({'status': 'okay', 'email': req.body.email, 'password': req.body.password});
             }
@@ -67,6 +67,23 @@ app.post('/signup', (req, res) => {
     } else if (req.body.password !== req.body.verifyPassword) {
         res.status(200);
         res.send({status: "not okay", 'message': "Passwords do not match"});
+    }
+})
+
+app.delete('/users', async(req, res) => {
+    const email = req.body.email;
+    const password = req.body.password;
+    if(await User.checkPassword(email, password)) {
+        if(req.body.password === req.body.verifyPassword) {
+            User.deleteOne({email}, (err, user) => {
+                req.session.userID = null;
+                req.session.email = null;
+                req.session.save();
+                res.status(200).json({status: "Account deleted"});
+            });
+        } else {res.status(200).json({status: "Account not deleted", message: "Passwords do not match"})}
+    } else {
+    res.status(401).json({status: "Account not deleted", message: "Incorrect login details"});
     }
 })
 

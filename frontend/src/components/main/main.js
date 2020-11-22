@@ -18,9 +18,9 @@ function MainPage() {
                     <div className="recentGames">
                         <h1 className="recentGamesHeader">Recent Games: </h1>   
                         <Game />
-                        <Game />  
-                        <Game />  
-                        <Game />   
+                        <Game />
+                        <Game />
+                        <Game />
                     </div>       
                 </div>
                 
@@ -28,6 +28,7 @@ function MainPage() {
                 : <h1>YOU ARE NOT LOGGED IN</h1>}
             
         </div>
+    )
 };
 
 export default MainPage;

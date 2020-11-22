@@ -1,0 +1,94 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.deleteUserForm {
+    margin: 10px auto;
+    width: 40vw;
+    height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-direction: column;
+    font-size: 1.5em;
+    align-items: center;
+    /* background: linear-gradient(45deg, #36b7ae81, #74b73681) */
+    background: linear-gradient(45deg, #851616, #a54747);
+    background-size: 400% 400%;
+    animation: gradient-shift 30s ease infinite;
+    border-radius: 1em;
+    padding: 2%;
+}
+.deleteUserForm h2 {
+    color: #000000;
+    text-align: center;
+}
+.deleteUserForm #email {
+    font-size: 2em;
+    color: white;
+    margin: 0.5em
+}
+.deleteUserInput {
+    width: 90%;
+    height: 35px;
+    padding-left: 15px;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white;
+    font-size: 1em;
+}
+.deleteUserInput:focus {
+    box-shadow: inset 0 0 15px #470a0aaf;
+}
+.deleteUserInput::selection {
+    background-color: #8b2121af;
+}
+
+.deleteUserForm label {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    /* color: rgb(255, 255, 255); */
+    color: rgba(255, 255, 255, 0.52);
+    display: block;
+    height: 10%;
+}
+.deleteUserForm * {
+    height: 30%;
+}
+.deleteUserSubmit {
+    grid-column: 1 / 3;
+    width: 30%;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    text-align: center;
+    color: #000000;
+    height: 20%;
+    border: none;
+    border-radius: 20px;
+    margin-top: 23px;
+    background-color: #ffae00;
+    cursor: pointer;
+}
+
+.deleteUserSubmit:focus, .deleteUserSubmit:active {
+    background-color: #b87d00;
+}
+.deleteUserSubmit:hover {
+    background-color: #ffba26;
+}
+
+
+/*ANIMATIONS*/
+@keyframes gradient-shift {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
