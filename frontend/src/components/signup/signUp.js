@@ -26,6 +26,7 @@ function SignUp() {
             if (res.data.status === "okay") {
                 console.log("Everything is fine!");
                 sessionStorage.setItem("email", [email]);
+                sessionStorage.setItem("login",true);
                 history.push('/main');
             } else {
                 alert(res.data.message);
