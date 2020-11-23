@@ -1,0 +1,28 @@
+.userBackground {
+    width: 35vw;
+    height: 60vh;
+    display: flex;
+    font-size: 1.5em;
+    align-items: center;
+    /* background: linear-gradient(45deg, #36b7ae81, #74b73681) */
+    background: linear-gradient(45deg, #36b7ae, #a3cc75);
+    background-size: 400% 400%;
+    animation: gradient-shift 30s ease infinite;
+    border-radius: 1em;
+    padding: 1%;
+}
+
+li {
+    list-style: none;
+    background-color: #337272;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+li:hover{
+    opacity: 50%;
+}
