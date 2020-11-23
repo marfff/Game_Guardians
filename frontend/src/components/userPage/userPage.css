@@ -12,7 +12,7 @@
     padding: 1%;
 }
 
-li {
+.userBackground li {
     list-style: none;
     background-color: #337272;
     border: none;
@@ -23,6 +23,6 @@ li {
     font-size: 16px;
 }
 
-li:hover{
+.userBackground li:hover{
     opacity: 50%;
 }

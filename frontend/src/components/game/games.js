@@ -28,10 +28,15 @@ export default class Games extends React.Component{
     render() {
 
         return (
-            <div className="searchBarButton">
-            <h1>{this.state.games.map((game, index) => {
-                return <ul><a href={`/game/${game._id}`} key={index}><li>{game.title}</li></a></ul>
-            })}</h1>
+            <div className="gamesList">
+            <h2>{this.state.games.map((game, index) => {
+                return <ul><a href={`/game/${game._id}`} key={index}>
+                            <li><img src={`../images/${game.title}`}></img></li>
+                            <li className="gamesListTitle">{game.title}</li>
+                            <li>{game.short_desc}</li>
+                            <li>PEGI: {game.pegi}</li>
+                        </a></ul>
+            })}</h2>
             </div>
         )
     }

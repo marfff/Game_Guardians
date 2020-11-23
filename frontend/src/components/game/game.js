@@ -72,10 +72,10 @@ export default class Game extends React.Component{
     render() {
 
         return (
-            <div className="searchBarButton">
-            <h1>{games.title}</h1>
-            <h1>{games.short_desc}</h1>
-            <h1>{games.props.pegi}</h1>
+            <div className="individualGame">
+                <h1>{this.state.games.title}</h1>
+                <h1>{this.state.games.short_desc}</h1>
+                <h1>{this.state.games.props.pegi}</h1>
             </div>
         )
     }
