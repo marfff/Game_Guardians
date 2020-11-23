@@ -10,7 +10,7 @@ const Navbar = props => {
                 <img src={logo} className="logo" alt="logo" />
             </div>
             <div className = "divLinks">
-                <ul>
+                <ul className = "navBarLinks">
                     <li><Link to="/login">Login</Link></li>
                     <li><Link to="/">Sign Up</Link></li>
                 </ul>

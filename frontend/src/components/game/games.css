@@ -1,0 +1,12 @@
+.gamesList ul{
+    display: flex;
+    justify-content: center;
+    font-size: calc(10px + 1vmin);
+}
+.gamesListTitle{
+    font-size: calc(15px + 1vmin);
+}
+.gamesList ul li{
+    padding-left: 20px;
+    list-style: none;
+}
