@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './main.css';
 import axios from 'axios';
 import Slider from './Slider/Slider';
-import Game from '../game/game'
+import Games from '../game/games'
 
 function MainPage() {
     const email = sessionStorage.getItem("email");
@@ -17,10 +17,8 @@ function MainPage() {
                     <Slider />  
                     <div className="recentGames">
                         <h1 className="recentGamesHeader">Recent Games: </h1>   
-                        <Game />
-                        <Game />
-                        <Game />
-                        <Game />
+                        <Games />
+
                     </div>       
                 </div>
                 
