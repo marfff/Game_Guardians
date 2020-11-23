@@ -9,7 +9,7 @@ import CreateReview from './components/createreview/createReview';
 import Logout from './components/logout/Logout';
 import UserPage from './components/userPage/userPage';
 import DeleteUser from './components/deleteUser/DeleteUser';
-import Games from './components/game/games';
+import Games from './components/game/gamesSummary';
 import Game from './components/game/game';
 import './App.css';
 
@@ -24,12 +24,12 @@ function App() {
             <Route exact path = "/main" component = {NavbarLI}/>
             <Route exact path = "/createReview" component = {NavbarLI}/>
             <Route exact path = "/account" component = {NavbarLI} />
-            <Route exact path = "/" component = {Navbar} />
-            <Route exact path = "/login" component = {Navbar} />
-            <Route exact path = "/logout" component = {Navbar} />
             <Route exact path = "/deleteUser" component = {NavbarLI} />
             <Route exact path = "/games" component = {NavbarLI} />
             <Route exact path = "/game" component = {NavbarLI} />
+            <Route exact path = "/" component = {Navbar} />
+            <Route exact path = "/login" component = {Navbar} />
+            <Route exact path = "/logout" component = {Navbar} />
 
           </Switch>
           </header>
