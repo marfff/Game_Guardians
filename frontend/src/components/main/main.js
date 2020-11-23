@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './main.css';
 import axios from 'axios';
 import Slider from './Slider/Slider';
-import Games from '../game/games'
+import Games from '../game/gamesSummary'
 
 function MainPage() {
     const email = sessionStorage.getItem("email");

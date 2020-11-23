@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../images/GG_logo.png';
+import logo from '../images/websiteImages/GG_logo.png';
 import './navBar.css';
 
 const Navbar = props => {

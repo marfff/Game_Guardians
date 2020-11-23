@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Images from '../images/gameImages/images';
 import axios from 'axios';
 import './games.css'
 import { startSession } from 'mongoose';
@@ -31,7 +32,7 @@ export default class Games extends React.Component{
             <div className="gamesList">
             <h2>{this.state.games.map((game, index) => {
                 return <ul><a href={`/game/${game._id}`} key={index}>
-                            <li><img src={`../images/${game.title}`}></img></li>
+                            <li className="gamesLogo"><Images id = {game._id}/></li>
                             <li className="gamesListTitle">{game.title}</li>
                             <li>{game.short_desc}</li>
                             <li>PEGI: {game.pegi}</li>
