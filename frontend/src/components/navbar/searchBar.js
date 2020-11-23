@@ -18,7 +18,7 @@ export default class SearchBar extends React.Component{
             console.log(data);
             this.setState({titles: data.map(game => {
                 return{value: game.title.toLowerCase(), label: game.title}
-            })})
+            })}) 
         })
         .catch((error) => {
             console.log(error)

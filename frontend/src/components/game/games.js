@@ -3,20 +3,13 @@ import axios from 'axios';
 import './games.css'
 import { startSession } from 'mongoose';
 
-export default class Game extends React.Component{
+export default class Games extends React.Component{
     constructor(props) {
         super(props);
         this.getGames = this.getGames.bind(this);
         this.state = {
-            games: [
-                {
-                title: props.title,
-                short_desc: props.short_desc,
-                pegi: props.pegi,
-                stars: props.stars,
-                synopsis: props.synopsis,
-                }
-            ]
+            games: [],
+            isLoaded: null,
         }
     }
     getGames() {
@@ -28,17 +21,17 @@ export default class Game extends React.Component{
         })
     }
     componentDidMount(){
-        this.getGames()
-        // if (this.state.games.length == 0) {this.getGames()}
+        // this.getGames()
+        if (this.state.games.length == 0) {this.getGames()}
     }
 
     render() {
 
         return (
             <div className="searchBarButton">
-            <h1>{games.title}</h1>
-            <h1>{games.short_desc}</h1>
-            <h1>{games.props.pegi}</h1>
+            <h1>{this.state.games.map((game, index) => {
+                return <ul><a href={`/game/${game._id}`} key={index}><li>{game.title}</li></a></ul>
+            })}</h1>
             </div>
         )
     }
