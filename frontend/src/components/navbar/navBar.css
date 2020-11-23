@@ -12,11 +12,43 @@ nav {
     z-index: 999;
     min-height: 10vh;
 }
+/* Logos */
 .logo,.logoLoggedIn {
     margin-left: 0px;
     width: 175px;
     pointer-events: none;
 }
+.divLogoLoggedIn{
+    margin: 0;
+}
+/* Searchbar */
+.searchBar{
+    display: block;
+	font-size: 16px;
+	font-family: sans-serif;
+    width: 80%;
+    max-width: 100%;
+}
+.searchBar:focus{
+    text-align: left;
+}
+.divSearch{
+    margin: 0;
+    padding-top: 1%;
+}
+.searchBarButton{
+    display: flex;
+    flex-direction: row;
+    min-width: 30vh;
+    padding-left: 30%;
+}
+.searchButton{
+    width: 20%;
+    min-height: 100%;
+    border: 2px solid #abd1cf;;
+    background-color: #36b7ae;
+}
+/* Links */
 nav ul{
     display: flex;
     justify-content: space-between;
@@ -29,32 +61,15 @@ nav ul li{
 nav a:hover{
     opacity: 0.5;
 }
-.searchBar{
-    border-radius: 20px;
-    text-align: center;
-    width: 175%;
-    height: 40%;
-}
 a:visited,a:link{
     text-decoration: none;
     color: #abd1cf;
 }
-.searchBar:focus{
-    text-align: left;
-}
 .divLinks{
+    margin: 0;
     padding-top: 1.5%;
-}
-.divLogoLoggedIn{
-    padding-left: 14.75%;
-    margin: 0;
-}
-.divSearch{
-    padding-top: 1%;
-    margin: 0;
 }
 .divLinksLoggedIn{
-    padding-top: 1.5%;
-    padding-right: 15%;
     margin: 0;
+    padding-top: 1.5%;
 }
