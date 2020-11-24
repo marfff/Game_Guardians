@@ -26,7 +26,7 @@ function Review() {
             console.log(res.data);
             if (res.data.status === "review worked") {
                 console.log("Everything is fine!");
-                alert("Review Added! Check the main page to view.");
+                alert("Review Added! Check your account page to view.");
                 setTitle("");
                 setReview("");
                 setStarsgiven("");
