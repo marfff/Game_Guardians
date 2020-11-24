@@ -12,7 +12,6 @@ const bcrypt = require('bcrypt');
 const { nanoid } = require('nanoid');
 const expressSession = require('express-session');
 const MongoStore = require('connect-mongo')(expressSession);
-const bcrypt = require('bcrypt');
 
 //app.use
 app.use(bodyParser.json());
@@ -50,20 +49,19 @@ app.get('/users', (req, res) => {
     });
 });
 
-app.post('/signup', (req, res) => {
+app.post('/signup', async (req, res) => {
     res.status(200);
-    //req.body.password = await bcrypt.hash(req.body.password, 10)
     if (req.body.password === req.body.verifyPassword){
         new User({
             email: req.body.email,
-            password: req.body.password
+            password: await bcrypt.hash(req.body.password, 10)
         }).save((err, obj) => {
             if (err) { //if a password is too short or if there is duplicated emails
                 res.status(200);
                 res.send({'status': "not okay", 'message': err.message});
             } else {
                 res.status(200);
-                res.send({'status': 'okay', 'email': req.body.email, 'password': req.body.password});
+                res.send({'status': 'okay', 'email': req.body.email, 'password': obj.password});
             }
         })
     } else if (req.body.password !== req.body.verifyPassword) {
@@ -131,10 +129,10 @@ app.post('/users', (req, res) => {
 });
 
 app.get('/games', (req, res) => {
- 
+    //Game.find({title:{$regex: "^2.*"}}, (err, games) =>
     //Game.find({title:"Fifa 21"}, (err, games) => {
     //Game.find({pegi:{$regex: "^3.*"}}, (err, games) => {
-    Game.find({stars:{$regex: "^2.*"}}, (err, games) => {
+        Game.find({}, (err, games) => {
         res.status(200);
         res.send(games);
     });

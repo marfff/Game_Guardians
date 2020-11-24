@@ -16,8 +16,7 @@ userSchema.statics.checkPassword = async function(email, password) {
     if (!user) {
         return false;
     }
-    //if (await bcrypt.compare(password, user.password)) {
-    if(user.password == password) {
+    if (await bcrypt.compare(password, user.password)) {
         return true;
     }
     return false;
