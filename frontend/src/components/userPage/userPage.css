@@ -3,6 +3,8 @@
     height: 60vh;
     display: flex;
     font-size: 1.5em;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     /* background: linear-gradient(45deg, #36b7ae81, #74b73681) */
     background: linear-gradient(45deg, #36b7ae, #a3cc75);
@@ -25,4 +27,9 @@
 
 .userBackground li:hover{
     opacity: 50%;
+}
+
+.userReview {
+    width: 35vw;
+    height: 60vh;
 }

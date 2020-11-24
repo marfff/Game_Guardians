@@ -7,21 +7,23 @@ import UserReview from '../userReviews/userReviews';
 
 function UserPage() {
     return(
-        <div class="userBackground">
+        <div >
         {(sessionStorage.getItem("login")) ? 
             <div>
-            <h1>Welcome, Game Guardian!</h1>
-            <br/>
-            <br/>
-                <p>Here you can find all you need to manage your account and reviews.</p>
-                <br/>
-                <p>My submitted reviews (find reviews with the email attached?)</p>
-                <br/>
-                <br/>
-                <UserReview />
-                <br/>
-                <li><Link to="/deleteUser">Delete Account</Link></li>
+                <div class="userBackground">
+                    <h1>Welcome, Game Guardian!</h1>
+                    <br/>
+                    <br/>
+                    <p>Here you can see all your reviews!</p>
+                    <br/>
+                    <li><Link to="/createReview">Write A Review</Link></li>
+                    <li><Link to="/deleteUser">Delete Account</Link></li>
+                </div>
+                <div className="userReview">
+                    <UserReview />
+                </div>
             </div>
+            
             : <h1>YOU ARE NOT LOGGED IN</h1>}
         </div>
     )
