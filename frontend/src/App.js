@@ -11,6 +11,8 @@ import UserPage from './components/userPage/userPage';
 import DeleteUser from './components/deleteUser/DeleteUser';
 import Games from './components/game/gamesSummary';
 import Game from './components/game/game';
+import Reviews from './components/reviews/reviewSummary';
+import Review from './components/reviews/reviews'
 import PageNotFound from './components/pagenotfound/pagenotfound';
 import './App.css';
 
@@ -28,6 +30,8 @@ function App() {
             <Route exact path = "/deleteUser" component = {NavbarLI} />
             <Route exact path = "/games" component = {NavbarLI} />
             <Route exact path = "/game" component = {NavbarLI} />
+            <Route exact path = "/reviews" component = {NavbarLI}/>
+            <Route exact path = "/review" component = {NavbarLI}/>
             <Route exact path = "/" component = {Navbar} />
             <Route exact path = "/login" component = {Navbar} />
             <Route exact path = "/logout" component = {Navbar} />
@@ -45,6 +49,8 @@ function App() {
               <Route exact path = "/deleteUser" component = {DeleteUser} />
               <Route exact path = "/games" component = {Games} />
               <Route exact path = "/game" component = {Game} />
+              <Route exact path = "/reviews" component = {Reviews}/>
+              <Route exact path = "/review" component = {Review} />
               <Route path = "/404" component = { PageNotFound } />
               <Redirect to="404" />
             </Switch>
