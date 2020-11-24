@@ -13,7 +13,7 @@ function MainPage() {
         <div className="mainDiv">
             {(sessionStorage.getItem("login")) ?
                 <div class="successMain">
-                    <span><h1>Welcome back </h1><h1 id="userWelcome">{user}!</h1></span>
+                    <span class="welcomeLogin"><h1>Welcome back </h1><h1 id="userWelcome">{user}!</h1></span>
                     <Slider />  
                     <div className="recentGames">
                         <h1 className="recentGamesHeader">Recent Games: </h1>   

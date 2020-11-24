@@ -3,7 +3,8 @@
     height: 60vh;
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding-top: 1%;
+    padding-bottom: 1%;;
     display: flex;
     align-content: center;
     overflow: hidden;
@@ -23,7 +24,7 @@
 
 #buttonLeft, #buttonRight {
     font-size: 5rem;
-    opacity: 50%;
+    opacity: 70%;
     padding: 0;
     color: white;
     background: rgba(0, 0, 0, 0.5);
@@ -43,16 +44,16 @@
 
 #buttonLeft {
     position: absolute;
-    top: 50%;
-    left: 20%;
+    top: 72%;
+    left: 17%;
     transform: translateY(-50%);
     width: 5%;
     height: 10%
 }
 #buttonRight {
     position: absolute;
-    top: 50%;
-    right: 20%;
+    top: 72%;
+    right: 17%;
     transform: translateY(-50%);
     width: 5%;
     height: 10%

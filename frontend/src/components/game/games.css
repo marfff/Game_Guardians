@@ -1,16 +1,41 @@
 .gamesList ul{
     display: flex;
-
-    justify-content: center;
+    flex-direction: column;
     font-size: calc(10px + 1vmin);
+    padding: 3%;
 }
+
+.gamesList a:link{ 
+    color:white;
+    text-decoration: none;
+    padding-left: 20px;
+    list-style: none;
+}
+
+
+.gamesList a:hover{ 
+    color:white;
+    text-decoration: none;
+    padding-left: 20px;
+    list-style: none;
+}
+
+.gamesList a:visited{ 
+    color:white;
+    text-decoration: none;
+    padding-left: 20px;
+    list-style: none;
+}
+
 .gamesListTitle{
     font-size: calc(15px + 1vmin);
 }
 .gamesList ul li{ 
     padding-left: 20px;
     list-style: none;
+    padding-top: 4%;
 }
+
 .gamesLogo img{
     max-width: 100px;
     min-width: 100px;
