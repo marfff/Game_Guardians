@@ -28,17 +28,22 @@ export default class Reviews extends React.Component{
     render() {
         const email = sessionStorage.getItem("email");
         return (
-            <div className="reviewsList">
-                <label htmlFor="email" name="email" id="email" value={email}>{email}</label>
-                <h3>{this.state.reviews.map((review, index) => {
-                    return <ul key={index}>
-                                {/* <li className="ReviewsLogo"><Images id = {review._id}/></li> */}
-                                <li className="reviewsListTitle">Game: {review.title}</li>
-                                <li className="reviewsListReview">Review: {review.review}</li>
-                                <li className="reviewsListStars">Stars: {review.starsgiven}</li>
+            <div>
+                <div className="reviewsList">
+                    <label htmlFor="email" name="email" id="email" value={email}>{email}</label>
+                    <h3>Your Reviews:</h3>
+                </div>
+                <div className="userReviews">
+                        <h3>
+                            {this.state.reviews.map((review, index) => {
+                            return <ul key={index}>
+                                <li id="reviewsListTitle">{review.title}</li>
+                                <li id="reviewsListReview">{review.review}</li>
+                                <li id="reviewsListStars">⭐{review.starsgiven}</li>
                             </ul>
-                    })}
-                </h3>
+                            })}
+                        </h3>
+                </div>
             </div>
         )
     }

@@ -1,14 +1,38 @@
 .reviewsList {
+    font-size: 2em;
+}
+.reviewsList label {
+    visibility: hidden;
+}
+.userReviews ul {
     display: flex;
-};
-.reviewsListTitle li {
-    color: red;
-};
+    color: white;
+    background: rgba(26, 70, 0, 0.9);
+    list-style: none;
+    padding: 0.5em;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px grey;
+}
 
-.reviewsListReviews li {
+#reviewsListTitle {
+    flex: 1 1 50%;
+    align-self: center;
+}
+
+#reviewsListReview {
+    flex: 1 1 450%;
+    align-self: center;
+    margin: 0 3% 0 3%;
+    font-weight: 200;
+    background: rgba(255, 255, 255, 0.7);
     color: green;
-};
+    border-radius: 5px;
+    padding: 0.5em;
+}
 
-.reviewsListStars li {
-    color: pink
-};
+#reviewsListStars {
+    flex: 1 1 50%;
+    align-self: center;
+}
+
