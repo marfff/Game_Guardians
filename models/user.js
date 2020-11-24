@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
 
 const userSchema = new mongoose.Schema({
     email:{type: String, required: true, unique: true},
@@ -15,6 +16,7 @@ userSchema.statics.checkPassword = async function(email, password) {
     if (!user) {
         return false;
     }
+    //if (await bcrypt.compare(password, user.password)) {
     if(user.password == password) {
         return true;
     }

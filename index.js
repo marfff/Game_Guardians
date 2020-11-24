@@ -12,6 +12,7 @@ const bcrypt = require('bcrypt');
 const { nanoid } = require('nanoid');
 const expressSession = require('express-session');
 const MongoStore = require('connect-mongo')(expressSession);
+const bcrypt = require('bcrypt');
 
 //app.use
 app.use(bodyParser.json());
@@ -51,6 +52,7 @@ app.get('/users', (req, res) => {
 
 app.post('/signup', (req, res) => {
     res.status(200);
+    //req.body.password = await bcrypt.hash(req.body.password, 10)
     if (req.body.password === req.body.verifyPassword){
         new User({
             email: req.body.email,
