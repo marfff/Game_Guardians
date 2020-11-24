@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Router, useHistory } from 'react-router-dom';
 import axios from 'axios'; 
 import './userPage.css'; 
+import UserReview from '../userReviews/userReviews';
 
 function UserPage() {
     return(
@@ -17,6 +18,7 @@ function UserPage() {
                 <p>My submitted reviews (find reviews with the email attached?)</p>
                 <br/>
                 <br/>
+                <UserReview />
                 <br/>
                 <li><Link to="/deleteUser">Delete Account</Link></li>
             </div>

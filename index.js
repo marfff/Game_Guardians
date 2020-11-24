@@ -186,6 +186,16 @@ app.get('/reviews', (req, res) => {
     });
 });
 
+app.get('/userReviews/:email', (req, res) => {
+    const email = req.params.email;
+    // console.log(email)
+    Review.find({email}, (err, reviews) => {
+    // Review.find({email: email}, (err, reviews) => {
+        res.status(200);
+        res.send(reviews);
+    });
+});
+
 app.post('/reviews', (req, res) => {
     const review = new Review ({
         title: req.body.title,

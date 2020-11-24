@@ -1,0 +1,14 @@
+.reviewsList {
+    display: flex;
+};
+.reviewsListTitle li {
+    color: red;
+};
+
+.reviewsListReviews li {
+    color: green;
+};
+
+.reviewsListStars li {
+    color: pink
+};
