@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
 import Navbar from './components/navbar/navBar';
 import NavbarLI from './components/navbar/navBarLoggedIn';
 import Signup from './components/signup/signUp';
@@ -11,6 +11,7 @@ import UserPage from './components/userPage/userPage';
 import DeleteUser from './components/deleteUser/DeleteUser';
 import Games from './components/game/gamesSummary';
 import Game from './components/game/game';
+import PageNotFound from './components/pagenotfound/pagenotfound';
 import './App.css';
 
 
@@ -44,6 +45,8 @@ function App() {
               <Route exact path = "/deleteUser" component = {DeleteUser} />
               <Route exact path = "/games" component = {Games} />
               <Route exact path = "/game" component = {Game} />
+              <Route path = "/404" component = { PageNotFound } />
+              <Redirect to="404" />
             </Switch>
           </body>
         </div>
