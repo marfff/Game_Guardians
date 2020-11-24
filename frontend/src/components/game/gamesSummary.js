@@ -24,17 +24,17 @@ export default class Games extends React.Component{
         // this.getGames()
         if (this.state.games.length === 0) {this.getGames()}
     }
-
     render() {
 
         return (
             <div className="gamesList">
+            <h1 id="gamesTitle">Recent Games</h1>
             <h2>{this.state.games.map((game, index) => {
-                return <ul><a href={`/game/${game._id}`} key={index}>
+                return <ul><a href={`/game`} key={index}>
                             <li className="gamesLogo"><Images id = {game._id}/></li>
                             <li className="gamesListTitle">{game.title}</li>
-                            <li>{game.short_desc}</li>
-                            <li>PEGI: {game.pegi}</li>
+                            <li className="gamesDesc">{game.short_desc}</li>
+                            <li className="pegi">PEGI Rating: {game.pegi}</li>
                         </a></ul>
             })}</h2>
             </div>

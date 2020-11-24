@@ -1,7 +1,8 @@
 import React from 'react';
 import './main.css';
 import Slider from './Slider/Slider';
-import Games from '../game/gamesSummary'
+import Games from '../game/gamesSummary';
+import Reviews from '../reviews/reviewSummary';
 
 function MainPage() {
     const email = sessionStorage.getItem("email");
@@ -14,10 +15,9 @@ function MainPage() {
                 <div class="successMain">
                     <span class="welcomeLogin"><h1>Welcome back </h1><h1 id="userWelcome">{user}!</h1></span>
                     <Slider />  
-                    <div className="recentGames">
-                        <h1 className="recentGamesHeader">Recent Games: </h1>   
+                    <div className="recentGames">   
                         <Games />
-
+                        <Reviews />
                     </div>       
                 </div>
                 

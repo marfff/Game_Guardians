@@ -15,10 +15,10 @@ import fbc from './Marvels Spider Man Miles Morales.jpeg';//MarvelsSpiderMan
 import fbe from './Hunting Simulator.jpeg';//HuntingSim
 import fc0 from './Castle Storm 2.jpeg';//CastleStorm2
 import fc2 from './Blair Witch.png';//BlairWitch
+import placeholder from './placeholder.png';
 
 function GameIcons({id}) {
     let lastThree = id.substr(id.length - 3);
-    console.log(lastThree);
     if (lastThree === 'f9c'){return(<img src={f9c} alt="img-logo"></img>)};
     if (lastThree === 'f9d'){return(<img src={f9d} alt="img-logo"></img>)};
     if (lastThree === 'fa1'){return(<img src={fa1} alt="img-logo"></img>)};
@@ -35,7 +35,7 @@ function GameIcons({id}) {
     if (lastThree === 'fbe'){return(<img src={fbe} alt="img-logo"></img>)};
     if (lastThree === 'fc0'){return(<img src={fc0} alt="img-logo"></img>)};
     if (lastThree === 'fc2'){return(<img src={fc2} alt="img-logo"></img>)};
-    return (<img alt="img-logo"></img>)
+    return (<img src={placeholder} alt="img-logo"></img>)
 }
 
 export default GameIcons;

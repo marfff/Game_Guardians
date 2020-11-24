@@ -22,6 +22,16 @@ nav {
     margin: 0;
 }
 /* Searchbar */
+.divSearch{
+    margin: 0;
+    padding-top: 1.5%;
+}
+.searchBarButton{
+    display: flex;
+    flex-direction: row;
+    min-width: 45vh;
+    padding-left: 35%;
+}
 .searchBar{
     display: block;
 	font-size: 16px;
@@ -31,16 +41,6 @@ nav {
 }
 .searchBar:focus{
     text-align: left;
-}
-.divSearch{
-    margin: 0;
-    padding-top: 1.5%;
-}
-.searchBarButton{
-    display: flex;
-    flex-direction: row;
-    min-width: 45vh;
-    padding-left: 50%;
 }
 .searchButton{
     width: 15%;

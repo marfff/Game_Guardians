@@ -55,6 +55,7 @@ function Review() {
                     <input type="text" name="title" autoComplete="off" className="reviewInput" value={title} id="title" onChange={handleChange} />
                     <label htmlFor="review">Write review here: </label>
                     <textarea  name="review" cols="40" rows="5" autoComplete="off" className="reviewInput" value={review} id="review" onChange={handleChange} />
+                    <label htmlFor="starsgiven">Stars Given: </label>
                     <input type="number" name="starsgiven" autoComplete="off" value={starsgiven} id="starsgiven" onChange={handleChange} min="1" max="5" />
 
 

@@ -1,5 +1,10 @@
-#gamesTitle{
+.reviewsList{
     color: #085353;
+    padding-bottom: 3%;
+    display: block;
+}
+
+#reviewsTitle{
     margin: 10px auto;
     width: 60vh;
     height: 15%;
@@ -14,7 +19,11 @@
     margin-bottom:2%;
 }
 
-.gamesListTitle{
+a{
+    text-decoration: none;
+}
+
+.reviewTitle{
     color: #085353;
     font-weight: bold;
     font-size: 1.3em;
@@ -22,20 +31,26 @@
     padding-bottom: 2%;
 }
 
-.gamesDesc{
+.reviewEmail{
+    color: #085353;
+    font-size: .5em;
+    padding-bottom: 2%;
+}
+
+.reviewReview{
     color:black;
     font-size: .8em;
     font-weight: lighter;
     padding-bottom: 3%;
 }
 
-.pegi{
+.reviewStarsgiven{
     color: #085353;
     font-size: .8em;
     padding-bottom: 2%;
 }
 
-.gamesList ul{
+.reviewsList ul{
     margin: 10px auto;
     width: 60vh;
     display: flex;
@@ -46,26 +61,17 @@
     opacity: 95%;
 }
 
-.gamesList ul:nth-child(odd){
+.reviewsList ul:nth-child(odd){
     margin: 10px auto;
     width: 60vh;
     display: flex;
     flex-direction: row;
-    background: #a3cc75;
+    background:#a3cc75;
     border-radius: 1em;
     padding: 1.5%;
     opacity: 95%;
 }
 
-.gamesList ul li{ 
-    padding-left: 20px;
+.reviewsList ul li{ 
     list-style: none;
-    padding-top: 4%;
-}
-
-.gamesLogo img{
-    max-width: 125px;
-    min-width: 125px;
-    max-height: 125px;
-    min-height: 125px;
 }

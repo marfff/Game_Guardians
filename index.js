@@ -138,6 +138,16 @@ app.get('/games', (req, res) => {
         res.send(games);
     });
 });
+app.post('/games/*', (req, res) => {
+    const id = req.body.id;
+    console.log(`The id is: ${id}`);
+    //Game.find({title:"Fifa 21"}, (err, games) => {
+    //Game.find({pegi:{$regex: "^3.*"}}, (err, games) => {
+    Game.find({_id:id}, (err, games) => {
+        res.status(200);
+        res.send(games);
+    });
+});
 
 // router.get('/games/, (req, res) => {
 //     Game.find({stars:{$regex: "^2.*"}}, (err, games) => {
