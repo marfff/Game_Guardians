@@ -1,41 +1,62 @@
-.gamesList ul{
+#gamesTitle{
+    color: #085353;
     margin: 10px auto;
-    width: 40%;
+    width: 30%;
+    height: 15%;
     display: flex;
     flex-direction: column;
-    font-size: 1.5em;
+    font-size: 3em;
     background: linear-gradient(45deg, #36b7ae, #a3cc75);
     background-size: 400% 400%;
     animation: gradient-shift 30s ease infinite;
     border-radius: 1em;
     padding:2%;
-}
-
-.gamesList a:link{ 
-    color:white;
-    text-decoration: none;
-    padding-left: 20px;
-    list-style: none;
-}
-
-
-.gamesList a:hover{ 
-    color:white;
-    text-decoration: none;
-    padding-left: 20px;
-    list-style: none;
-}
-
-.gamesList a:visited{ 
-    color:white;
-    text-decoration: none;
-    padding-left: 20px;
-    list-style: none;
+    margin-bottom:2%;
 }
 
 .gamesListTitle{
-    font-size: calc(15px + 1vmin);
+    color: #085353;
+    font-weight: bold;
+    font-size: 1.3em;
+    font-style: italic;
+    padding-bottom: 2%;
 }
+
+.gamesDesc{
+    color:black;
+    font-size: .8em;
+    font-weight: lighter;
+    padding-bottom: 3%;
+}
+
+.pegi{
+    color: #085353;
+    font-size: .8em;
+    padding-bottom: 2%;
+}
+
+.gamesList ul{
+    margin: 10px auto;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    background: #36b7ae;
+    border-radius: 1em;
+    padding: 1.5%;
+    opacity: 95%;
+}
+
+.gamesList ul:nth-child(odd){
+    margin: 10px auto;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    background: #a3cc75;
+    border-radius: 1em;
+    padding: 1.5%;
+    opacity: 95%;
+}
+
 .gamesList ul li{ 
     padding-left: 20px;
     list-style: none;
