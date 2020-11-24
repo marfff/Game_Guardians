@@ -25,7 +25,6 @@ function App() {
             <Route exact path = "/createReview" component = {NavbarLI}/>
             <Route exact path = "/account" component = {NavbarLI} />
             <Route exact path = "/deleteUser" component = {NavbarLI} />
-            <Route exact path = "/games" component = {NavbarLI} />
             <Route exact path = "/game" component = {NavbarLI} />
             <Route exact path = "/" component = {Navbar} />
             <Route exact path = "/login" component = {Navbar} />
