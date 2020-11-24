@@ -1,7 +1,7 @@
 #gamesTitle{
     color: #085353;
     margin: 10px auto;
-    width: 30%;
+    width: 60vh;
     height: 15%;
     display: flex;
     flex-direction: column;
@@ -37,7 +37,7 @@
 
 .gamesList ul{
     margin: 10px auto;
-    width: 30%;
+    width: 60vh;
     display: flex;
     flex-direction: row;
     background: #36b7ae;
@@ -48,7 +48,7 @@
 
 .gamesList ul:nth-child(odd){
     margin: 10px auto;
-    width: 30%;
+    width: 60vh;
     display: flex;
     flex-direction: row;
     background: #a3cc75;
@@ -64,8 +64,8 @@
 }
 
 .gamesLogo img{
-    max-width: 100px;
-    min-width: 100px;
-    max-height: 100px;
-    min-height: 100px;
+    max-width: 125px;
+    min-width: 125px;
+    max-height: 125px;
+    min-height: 125px;
 }

@@ -31,6 +31,9 @@ export default class SearchBar extends React.Component{
         this.setState({ selectedOption });
         sessionStorage.setItem("id",selectedOption.id);
     }
+    refreshPage = () => {
+        window.location.reload();
+    }
     // searchGame = (event) => {
     //     console.log("hello from onChange", event.target.value)
     //     this.setState
@@ -46,7 +49,7 @@ export default class SearchBar extends React.Component{
                     onChange={this.handleChange}
                     options={this.state.titles}
                 />
-                <Link to='/game'>🔍</Link>
+                <Link to='/game' className="searchButton" onClick={this.refreshPage}>🔍</Link>
             </div>
         )
     }

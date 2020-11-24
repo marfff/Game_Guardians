@@ -25,12 +25,11 @@ export default class Games extends React.Component{
         // this.getGames()
         if (this.state.games.length == 0) {this.getGames()}
     }
-
     render() {
 
         return (
             <div className="gamesList">
-            <h1 id="gamesTitle">Games</h1>
+            <h1 id="gamesTitle">Recent Games</h1>
             <h2>{this.state.games.map((game, index) => {
                 return <ul><a href={`/game`} key={index}>
                             <li className="gamesLogo"><Images id = {game._id}/></li>
