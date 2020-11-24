@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Select from 'react-select';
 import './navBar.css'
@@ -8,16 +9,15 @@ export default class SearchBar extends React.Component{
         super(props);
         this.state = {
             titles: [],
-            selectedOption: null
+            selectedOption: 'null'
         }
     }
     getGames() {
         axios.get('http://localhost:5000/games',{})
         .then(res => {
             const data = res.data;
-            console.log(data);
             this.setState({titles: data.map(game => {
-                return{value: game.title.toLowerCase(), label: game.title}
+                return{id: game._id, value: game.title.toLowerCase(), label: game.title}
             })}) 
         })
         .catch((error) => {
@@ -27,20 +27,26 @@ export default class SearchBar extends React.Component{
     componentDidMount(){
         this.getGames()
     }
-    handleChange = (selectedOption) => {
-        this.setState({ selectedOption })
+    handleChange = async (selectedOption) => {
+        this.setState({ selectedOption });
+        sessionStorage.setItem("id",selectedOption.id);
     }
+    // searchGame = (event) => {
+    //     console.log("hello from onChange", event.target.value)
+    //     this.setState
+    // }
     render() {
         const { selectedOption } = this.state;
         return (
             <div className="searchBarButton">
-            <Select
-                className="searchBar"
-                value={selectedOption}
-                onChange={this.handleChange}
-                options={this.state.titles}
-            />
-            <button type="submit" className="searchButton">🔍</button>
+                <Select
+                    className="searchBar"
+                    id="searchBar"
+                    value={selectedOption}
+                    onChange={this.handleChange}
+                    options={this.state.titles}
+                />
+                <Link to='/game'>🔍</Link>
             </div>
         )
     }
