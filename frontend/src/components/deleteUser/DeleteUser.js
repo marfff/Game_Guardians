@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Router, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import './deleteUser.css';
 
@@ -23,7 +23,7 @@ function DeleteUser() {
         }}).then((res) => {
             console.log(res.data);
             if (res.data.status === "Account deleted") {
-                console.log("Account deleted");
+                alert("Account deleted");
                 sessionStorage.removeItem("email");
                 sessionStorage.removeItem("login");
                 history.push('/');

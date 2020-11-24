@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import axios from 'axios';
-import './games.css'
-import { startSession } from 'mongoose';
+import './games.css';
 
 export default class Game extends React.Component{
     constructor(props) {

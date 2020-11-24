@@ -58,7 +58,7 @@ app.post('/signup', async (req, res) => {
         }).save((err, obj) => {
             if (err) { //if a password is too short or if there is duplicated emails
                 res.status(200);
-                res.send({'status': "not okay", 'message': err.message});
+                res.send({'status': "not okay", 'message': "Whoops! This email is already in use."});
             } else {
                 res.status(200);
                 res.send({'status': 'okay', 'email': req.body.email, 'password': obj.password});
@@ -66,6 +66,7 @@ app.post('/signup', async (req, res) => {
         })
     } else if (req.body.password !== req.body.verifyPassword) {
         res.status(200);
+        console.log(res.data);
         res.send({status: "not okay", 'message': "Passwords do not match"});
     }
 })
@@ -99,7 +100,7 @@ app.post('/login', async(req, res) => {
         });
         return;
     }
-    res.status(401).json({status: "login not okay"});
+    res.status(200).json({status: "login not okay"});
 })
 
 app.post('/logout', (req, res) => { //resets user id to null - logging them out//
