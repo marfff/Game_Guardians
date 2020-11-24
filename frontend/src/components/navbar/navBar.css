@@ -30,7 +30,7 @@ nav {
     display: flex;
     flex-direction: row;
     min-width: 45vh;
-    padding-left: 50%;
+    padding-left: 35%;
 }
 .searchBar{
     display: block;

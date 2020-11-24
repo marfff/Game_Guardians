@@ -47,9 +47,7 @@ function App() {
               <Route exact path = "/account" component = {UserPage} />
               <Route exact path = "/deleteUser" component = {DeleteUser} />
               <Route exact path = "/games" component = {Games} />
-              <Route exact path = "/game" component = {Game} />
               <Route exact path = "/reviews" component = {Reviews}/>
-              <Route exact path = "/review" component = {Review} />
               <Route path = "/404" component = { PageNotFound } />
               <Redirect to="404" />
             </Switch>
