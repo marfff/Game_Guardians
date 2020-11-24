@@ -196,7 +196,7 @@ app.post('/reviews', (req, res) => {
 
     review.save().then(() => {
         res.status(200);
-        res.send({'status':'worked', 
+        res.send({'status':'review worked', 
             'title': req.body.title, 
             'email': req.body.email, 
             'review': req.body.review, 
