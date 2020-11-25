@@ -16,6 +16,8 @@ function Navbar(props){
             <div className="divLinksLoggedIn">
                 <ul>
                     <li><Link to="/main">Home Page</Link></li>
+                    <li><Link to="/games">Games</Link></li>
+                    <li><Link to="/reviews">Reviews</Link></li>
                     <li><Link to="/account">Account</Link></li>
                     <li><Link to="/createReview">Create Review</Link></li>
                     <li><Link to="/logout">Logout</Link></li>
