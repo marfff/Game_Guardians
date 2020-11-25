@@ -28,7 +28,7 @@
     font-weight: 900;
     font-size: 1em;
 }
-.reviewForm #review {
+.reviewForm #review { 
     height: 50%;
     word-wrap: normal;
     word-break: none;
@@ -77,8 +77,11 @@
     text-align: center;
     font-size: 1em;
     padding: 0.5em;
-    color: #337272;
+    color: white;
+    border: none;
+    border-radius: 5px;
     font-weight: 600;
+    background:  rgba(0, 0, 0, 0.2);
 }
 
 .reviewSubmit {
@@ -96,6 +99,7 @@
     background-color: #327272;
     cursor: pointer;
 }
+
 
 
 /*ANIMATIONS*/
