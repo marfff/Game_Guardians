@@ -1,7 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Router, useHistory } from 'react-router-dom';
-import axios from 'axios'; 
+// import { Router, useHistory } from 'react-router-dom';
 import './userPage.css'; 
 import UserReview from '../userReviews/userReviews';
 
@@ -16,8 +15,10 @@ function UserPage() {
                     <br/>
                     <p>Here you can see all your reviews!</p>
                     <br/>
-                    <li><Link to="/createReview">Write A Review</Link></li>
-                    <li><Link to="/deleteUser">Delete Account</Link></li>
+                    <div className="userAccountLinks">
+                        <li id="writeReviewLink"><Link to="/createReview" >Write A Review</Link></li>
+                        <li id="deleteAccountLink"><Link to="/deleteUser" >Delete Account</Link></li>
+                    </div>
                 </div>
                 <div className="userReview">
                     <UserReview />

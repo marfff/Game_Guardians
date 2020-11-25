@@ -1,6 +1,6 @@
 .userBackground {
     width: 35vw;
-    height: 60vh;
+    height: 30vh;
     display: flex;
     font-size: 1.5em;
     flex-direction: column;
@@ -33,3 +33,26 @@
     width: 35vw;
     height: 60vh;
 }
+
+.userAccountLinks{
+    display: flex;
+    width: 80%;
+    text-emphasis: none;
+    cursor: pointer;
+    
+}
+.userAccountLinks a {
+    color: white;
+    text-decoration: none;
+}
+#deleteAccountLink {
+    background: rgb(161, 12, 12);
+    border-radius: 50px;
+}
+#writeReviewLink {
+    border-radius: 50px;
+}
+#deleteAccountLink:hover, #writeReviewLink:hover {
+    box-shadow: 2px 2px 2px 2px black;
+}
+

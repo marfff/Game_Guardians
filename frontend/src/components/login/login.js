@@ -22,12 +22,13 @@ function Login() {
             sessionStorage.setItem("email", [email]);
             sessionStorage.setItem("login",true);
             history.push('/main');
-        } else if (res.data.status === "login not okay") {
+        } else {
+        // } else if (res.data.status === "login not okay") {
             if (window.confirm("Login credentials not found.\n \nSignup?")) {
-                history.push('/', '/login');
-            }
-            ;
-        }})
+                history.push('/', '/login' );
+            };
+        }
+    })
     }
     return(
         <div>

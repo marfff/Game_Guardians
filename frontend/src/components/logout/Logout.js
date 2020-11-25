@@ -15,7 +15,7 @@ function Logout() {
                 <br/>
             Click below to navigate back to the login page.
             </h3>
-            <a id="logoutLink"><Link to="/login">Log me back in!</Link></a>
+            <a id="logoutLink" href="/#"><Link to="/login">Log me back in!</Link></a>
         </div>
     );
 };

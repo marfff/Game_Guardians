@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './createReview.css';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 function Review() {
 
+    const history = useHistory();
     const email = sessionStorage.getItem("email");
     const [title, setTitle] = useState("");
     const [review, setReview] = useState("");
@@ -26,12 +28,14 @@ function Review() {
             console.log(res.data);
             if (res.data.status === "review worked") {
                 console.log("Everything is fine!");
-                alert("Review Added! Check your account page to view.");
+                if (window.confirm("Thanks for your review!\n \nSee it in your account page?")) {
+                    history.push('/account', '/createReview' );
+                };
                 setTitle("");
-                setReview("");
+                setReview(""); 
                 setStarsgiven("");
             } else {
-                alert(res.data.message);
+                alert(res.data.message); 
                 setTitle("");
                 setReview("");
                 setStarsgiven("");

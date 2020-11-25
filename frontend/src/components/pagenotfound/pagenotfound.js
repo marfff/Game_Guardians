@@ -11,7 +11,7 @@ function PageNotFound() {
             <br/>
         Click below to get back where you need to be.
         </h3>
-        <a id="errorLink"><Link to="/main">Bring me home!</Link></a>
+        <a id="errorLink" href="/#"><Link to="/main">Bring me home!</Link></a>
     </div>
     );
 };

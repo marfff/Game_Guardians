@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Images from '../images/gameImages/images';
 import axios from 'axios';
 import './games.css'
-import { startSession } from 'mongoose';
 
 export default class Games extends React.Component{
     constructor(props) {
@@ -23,7 +22,7 @@ export default class Games extends React.Component{
     }
     componentDidMount(){
         // this.getGames()
-        if (this.state.games.length == 0) {this.getGames()}
+        if (this.state.games.length === 0) {this.getGames()}
     }
     render() {
 

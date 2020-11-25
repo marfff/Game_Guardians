@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import axios from 'axios';
-import { startSession } from 'mongoose';
 import './userReviews.css';
 
 export default class Reviews extends React.Component{
@@ -22,7 +21,7 @@ export default class Reviews extends React.Component{
     }
     componentDidMount(){
         // this.getReviews()
-        if (this.state.reviews.length == 0) {this.getReviews()}
+        if (this.state.reviews.length === 0) {this.getReviews()}
     }
 
     render() {

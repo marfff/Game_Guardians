@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './main.css';
-import axios from 'axios';
 import Slider from './Slider/Slider';
 import Games from '../game/gamesSummary';
 import Reviews from '../reviews/reviewSummary';
